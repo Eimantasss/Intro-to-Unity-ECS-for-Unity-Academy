@@ -9,7 +9,10 @@ namespace AcademyHomework
 
         public static GameManager GM;
 
-        int SpawnerCounter;
+        [Tooltip("Don't use more than 75 000. YOU HAVE BEEN WARNED!")]
+        public int SpawnHowMany;
+
+        //int SpawnerCounter;
         public GameObject BadguyPrefab;
 
         //For checking when to bounce off of the edges
@@ -28,17 +31,26 @@ namespace AcademyHomework
         // Use this for initialization
         void Start()
         {
-
+            Spawn (SpawnHowMany);
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (SpawnerCounter < 10000)
-                //Instantiate(BadguyPrefab, new Vector3(Random.Range(1, 2),0 ,0 ), transform.rotation);
+            
+        }
 
+        void Spawn (int amount)
+        {
 
-            SpawnerCounter++;
+            for (int i = 0; i < amount; i++)
+                Instantiate(BadguyPrefab,
+                new Vector3(
+                    Random.Range(TopLeftBound.transform.position.x + 5, BotRightBound.transform.position.x - 5),
+                    Random.Range(TopLeftBound.transform.position.y - 5, BotRightBound.transform.position.y + 5),
+                    -0.1f),
+                transform.rotation,
+                GM.transform);
         }
     }
 }
