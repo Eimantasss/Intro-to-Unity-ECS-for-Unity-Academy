@@ -9,10 +9,11 @@ namespace AcademyHomework
 
         public static GameManager GM;
 
+        //int SpawnerCounter;
         [Tooltip("Don't use more than 75 000. YOU HAVE BEEN WARNED!")]
         public int SpawnHowMany;
 
-        //int SpawnerCounter;
+        public GameObject StotelePrefab;
         public GameObject BadguyPrefab;
 
         //For checking when to bounce off of the edges
@@ -31,7 +32,10 @@ namespace AcademyHomework
         // Use this for initialization
         void Start()
         {
-            Spawn (SpawnHowMany);
+
+            SpawnStoteles();
+            SpawnEnemies (SpawnHowMany);
+
         }
 
         // Update is called once per frame
@@ -40,10 +44,21 @@ namespace AcademyHomework
             
         }
 
-        void Spawn (int amount)
+        void SpawnStoteles()
+        {
+            float[] coordsp = { -50.0f, 0.0f, 50.0f, -50.0f, 0.0f, 50.0f};
+            float y = 20.0f;
+            for (int i = 0; i < 6; i++)
+            {
+                Instantiate(StotelePrefab, new Vector3(coordsp[i], y, -0.1f), transform.rotation);
+                y *= -1;
+            }
+        }
+
+        void SpawnEnemies (int amount)
         {
 
-            for (int i = 0; i < amount; i++)
+            for (int i = 0; i <= amount; i++)
                 Instantiate(BadguyPrefab,
                 new Vector3(
                     Random.Range(TopLeftBound.transform.position.x + 5, BotRightBound.transform.position.x - 5),
