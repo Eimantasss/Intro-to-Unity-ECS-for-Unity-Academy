@@ -9,24 +9,14 @@ public class Movement : MonoBehaviour {
     Vector3 position;
 
     //For checking when to bounce off of the edges
-    public GameObject TopBound;
-    public GameObject BotBound;
-    public GameObject LeftBound;
-    public GameObject RightBound;
-    float TopBoundPos;
-    float BotBoundPos;
-    float LeftBoundPos;
-    float RightBoundPos;
+    public GameObject TopLeftBound;
+    public GameObject BotRightBound;
 
     // Use this for initialization
     void Start ()
     {
         //Vector3 position = transform.position;
         //transform.Rotate(Vector3.forward, Random.Range(0.0f, 359.0f));
-        TopBoundPos = TopBound.transform.position.y;
-        BotBoundPos = BotBound.transform.position.y;
-        LeftBoundPos = LeftBound.transform.position.x;
-        RightBoundPos = RightBound.transform.position.x;
     }
 	
 	// Update is called once per frame
@@ -39,13 +29,13 @@ public class Movement : MonoBehaviour {
         transform.position = position;
 
 
-        if (position.y > TopBoundPos)
+        if (position.y > TopLeftBound.transform.position.y)
             speed = speed * -1;
-        else if (position.y < BotBoundPos)
+        else if (position.y < BotRightBound.transform.position.y)
             speed = speed * -1;
-        else if (position.x < LeftBoundPos)
+        else if (position.x < TopLeftBound.transform.position.x)
             hspeed = hspeed * -1;
-        else if (position.x > RightBoundPos)
+        else if (position.x > BotRightBound.transform.position.x)
             hspeed = hspeed * -1;
     }
 }
