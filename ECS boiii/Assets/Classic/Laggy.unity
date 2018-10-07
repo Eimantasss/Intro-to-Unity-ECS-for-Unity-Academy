@@ -249,6 +249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5f4cbef4dad57419e97691595d1109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BadguyPrefab: {fileID: 1617467812559230, guid: b5428d86ec7b5f148bbad3dcf598268f,
+    type: 2}
+  TopLeftBound: {fileID: 1752245993}
+  BotRightBound: {fileID: 1221744842}
 --- !u!4 &155352049
 Transform:
   m_ObjectHideFlags: 0
@@ -405,11 +409,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4455748411590812, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -84.7
+      value: -71.8
       objectReference: {fileID: 0}
     - target: {fileID: 4455748411590812, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.4
+      value: 41.8
       objectReference: {fileID: 0}
     - target: {fileID: 4455748411590812, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -437,60 +441,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
         type: 2}
-      propertyPath: TopBound
-      value: 
-      objectReference: {fileID: 1752245993}
-    - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
-        type: 2}
-      propertyPath: hspeed
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
-        type: 2}
-      propertyPath: BotBound
-      value: 
-      objectReference: {fileID: 1221744842}
-    - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
-        type: 2}
-      propertyPath: LeftBound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
-        type: 2}
-      propertyPath: RightBound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4455748411590812, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4455748411590812, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
-        type: 2}
       propertyPath: speed
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 4455748411590812, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4455748411590812, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
         type: 2}
-      propertyPath: TopLeftBound
-      value: 
-      objectReference: {fileID: 1752245993}
-    - target: {fileID: 114246891855391634, guid: b5428d86ec7b5f148bbad3dcf598268f,
-        type: 2}
-      propertyPath: BotRightBound
-      value: 
-      objectReference: {fileID: 1221744842}
+      propertyPath: hspeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5428d86ec7b5f148bbad3dcf598268f, type: 2}
   m_IsPrefabAsset: 0

@@ -1,26 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AcademyHomework;
 
-public class Movement : MonoBehaviour {
+public class Movement : MonoBehaviour
+{
 
     public float speed;
     public float hspeed;
     Vector3 position;
 
-    //For checking when to bounce off of the edges
-    public GameObject TopLeftBound;
-    public GameObject BotRightBound;
-
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        //Vector3 position = transform.position;
-        //transform.Rotate(Vector3.forward, Random.Range(0.0f, 359.0f));
+        
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
 
         Vector3 position = transform.position;
@@ -28,14 +25,14 @@ public class Movement : MonoBehaviour {
         position += transform.right * hspeed * Time.deltaTime;
         transform.position = position;
 
-
-        if (position.y > TopLeftBound.transform.position.y)
+        //ckeching when to bounce off
+        if (position.y > GameManager.GM.TopLeftBound.transform.position.y)
             speed = speed * -1;
-        else if (position.y < BotRightBound.transform.position.y)
+         else if (position.y < GameManager.GM.BotRightBound.transform.position.y)
             speed = speed * -1;
-        else if (position.x < TopLeftBound.transform.position.x)
+        else if (position.x < GameManager.GM.TopLeftBound.transform.position.x)
             hspeed = hspeed * -1;
-        else if (position.x > BotRightBound.transform.position.x)
+        else if (position.x > GameManager.GM.BotRightBound.transform.position.x)
             hspeed = hspeed * -1;
     }
 }
