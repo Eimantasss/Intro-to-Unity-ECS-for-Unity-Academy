@@ -53,6 +53,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  hspeed: 2
+  TopBound: {fileID: 0}
+  BotBound: {fileID: 0}
+  LeftBound: {fileID: 0}
+  RightBound: {fileID: 0}
 --- !u!212 &212628630645070600
 SpriteRenderer:
   m_ObjectHideFlags: 1
