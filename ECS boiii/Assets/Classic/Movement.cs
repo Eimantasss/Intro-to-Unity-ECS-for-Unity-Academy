@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
 
     void DistanceFromGoodGuy()
     {
-        //1.5F is an optimal distance when to start checking collisions
+        //1.5F is an optimal distance when to start checking collisions. It depends on the scale of the good guy. 
         float distance;
         for(int i = 0; i < GoodGuys.Length; i++)
         {
