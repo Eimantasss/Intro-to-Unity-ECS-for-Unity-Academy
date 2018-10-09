@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using AcademyHomework.ECS;
 using UnityEngine;
 
 namespace AcademyHomework
@@ -9,7 +11,6 @@ namespace AcademyHomework
 
         public static GameManager GM;
 
-        //int SpawnerCounter;
         [Tooltip("Don't use more than 75 000. YOU HAVE BEEN WARNED!")]
         public int SpawnHowMany;
 
@@ -23,10 +24,10 @@ namespace AcademyHomework
         //Make sure there is only one manager
         private void Awake()
         {
-            if (GM == null)
+            /*if (GM == null)
                 GM = this;
             else if (GM != this)
-                Destroy(gameObject);
+                Destroy(gameObject);*/
         }
 
         // Use this for initialization
@@ -61,8 +62,8 @@ namespace AcademyHomework
             for (int i = 0; i <= amount; i++)
                 Instantiate(BadguyPrefab,
                 new Vector3(
-                    Random.Range(TopLeftBound.transform.position.x + 5, BotRightBound.transform.position.x - 5),
-                    Random.Range(TopLeftBound.transform.position.y - 5, BotRightBound.transform.position.y + 5),
+                    UnityEngine.Random.Range(TopLeftBound.transform.position.x + 5, BotRightBound.transform.position.x - 5),
+                    UnityEngine.Random.Range(TopLeftBound.transform.position.y - 5, BotRightBound.transform.position.y + 5),
                     -0.1f),
                 transform.rotation,
                 GM.transform);

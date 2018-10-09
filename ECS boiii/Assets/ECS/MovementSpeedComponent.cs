@@ -4,11 +4,11 @@ using Unity.Entities;
 
 namespace AcademyHomework.ECS
 {
-    //[Serializable]
+    [Serializable]
     public struct MovementSpeed : IComponentData
     {
-        public float Vvalue;
-        public float Hvalue;
+        public float Vspeed;
+        public float Hspeed;
     }
     public class MovementSpeedComponent : ComponentDataWrapper<MovementSpeed> { }
 }

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114321111301486800}
   - component: {fileID: 114050974583095882}
   - component: {fileID: 114440480395218566}
+  - component: {fileID: 114834848085680452}
   m_Layer: 0
   m_Name: BadGuysECS
   m_TagString: Untagged
@@ -105,3 +106,17 @@ MonoBehaviour:
     subMesh: 0
     castShadows: 0
     receiveShadows: 0
+--- !u!114 &114834848085680452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634097071168650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15952c59bcb7dbf4eb30235fff3a3372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Vspeed: 0
+    Hspeed: 0
